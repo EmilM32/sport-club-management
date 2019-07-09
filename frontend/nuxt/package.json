@@ -1,0 +1,25 @@
+{
+  "name": "tangunpro",
+  "version": "1.0.0",
+  "description": "Tangun coach administration panel",
+  "author": "Emil Majer",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/pwa": "^2.6.0",
+    "@nuxtjs/vuetify": "0.5.5",
+    "nuxt": "^2.0.0",
+    "nuxt-i18n": "^5.12.7"
+  },
+  "devDependencies": {
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "nodemon": "^1.18.9"
+  }
+}
