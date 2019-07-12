@@ -11,7 +11,6 @@ export default {
     surname: 'Surname',
     dateOfBirth: 'Date of birth',
     sex: 'Gender',
-    kup: 'Kup',
     level: 'Level',
     chooseMonth: 'Choose months',
     rowsPerPage: 'Rows per page',

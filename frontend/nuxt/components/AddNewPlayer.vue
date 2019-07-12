@@ -61,16 +61,16 @@
               <v-flex xs3>
                 <span>{{$t('table.sex')}}:</span>
               </v-flex>
-              <v-flex xs9>
+              <v-flex xs3>
                 <v-select
                   :items="gender"
                   v-model="genderSelected"
                 ></v-select>
               </v-flex>
-              <v-flex xs3>
+              <v-flex xs3 text-xs-center>
                 <span>{{$t('table.level')}}:</span>
               </v-flex>
-              <v-flex xs9>
+              <v-flex xs3>
                 <v-select
                   :items="level"
                   v-model='levelSelected'
@@ -109,7 +109,9 @@ export default {
           { text: this.$t('table.kup'), value: 'level', align: 'center'},
         ],
         level: [
-          '10','9','8','7','6','5','4','3','2','1'
+          '10 kup','9 kup','8 kup','7 kup','6 kup','5 kup','4 kup','3 kup','2 kup','1 kup', 
+          '1 poom', '2 poom', '3 poom', 
+          '1 dan', '2 dan', '3 dan', '4 dan', '5 dan', '6 dan', '7 dan', '8 dan', '9 dan', '10 dan',
         ],
         list: [],
       }

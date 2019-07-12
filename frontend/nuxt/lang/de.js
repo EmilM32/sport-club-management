@@ -11,7 +11,6 @@ export default {
     surname: 'Nazwisko',
     dateOfBirth: 'Data urodzenia',
     sex: 'Płeć',
-    kup: 'Kup',
     level: 'Stopień',
     chooseMonth: 'Wybierz miesiące',
     rowsPerPage: 'Wierszy na stronie',

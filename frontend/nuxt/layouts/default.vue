@@ -199,7 +199,6 @@ export default {
           children: [
             {
               title: this.$t('navigation.payments'),
-              icon: 'bar_chart',
               to: '/ChartPayments'
             }
           ]

@@ -2,7 +2,7 @@ from django.db import models
 
 class Level(models.Model):
   id = models.AutoField(primary_key=True)
-  kup = models.IntegerField(default=0)
+  level = models.CharField(max_length=20,default=0)
   name = models.CharField(max_length=100)
 
 class MainList(models.Model):

@@ -33,7 +33,7 @@ def get_data_list(request):
 
   data_to_front = []
   for mlist in main_list:
-    level = Level.objects.get(id=mlist['level_id']).kup
+    level = Level.objects.get(id=mlist['level_id']).level
     data_to_front += [{
       'player_id':mlist['id'],
       'first_name':mlist['first_name'],

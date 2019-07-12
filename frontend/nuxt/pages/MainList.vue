@@ -51,7 +51,7 @@ import axios from "axios";
           { text: this.$t('table.surname'), value: 'last_name', align: 'center'},
           { text: this.$t('table.dateOfBirth'), value: 'date_of_birth', align: 'center'},
           { text: this.$t('table.sex'), value: 'sex', align: 'center'},
-          { text: this.$t('table.kup'), value: 'level', align: 'center'},
+          { text: this.$t('table.level'), value: 'level', align: 'center'},
         ],
         level: [
           '10','9','8','7','6','5','4','3','2','1'
