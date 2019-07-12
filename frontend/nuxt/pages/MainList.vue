@@ -44,7 +44,6 @@ import axios from "axios";
         levelSelected: '',
         gender:['M','K'],
         genderSelected: '',
-        // date: new Date().toISOString().substr(0, 10),
         date: '',
         headers: [
           { text: this.$t('table.name'), value: 'first_name', align: 'center'},

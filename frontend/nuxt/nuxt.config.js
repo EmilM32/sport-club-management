@@ -34,7 +34,7 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: [{ src: "@/plugins/chart", ssr: false }],
   /*
   ** Nuxt.js modules
   */
@@ -46,7 +46,7 @@ export default {
     'nuxt-i18n',
   ],
   i18n: {
-    locales: ['en', 'pl'],
+    locales: ['pl', 'en', 'de'],
     defaultLocale: 'pl',
     lazy: true,
     langDir: 'lang/',
