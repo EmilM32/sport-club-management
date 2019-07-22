@@ -39,6 +39,7 @@
               :to="child.to"
               router
               exact
+              active-class="teal--text text--lighten-2"
               >
               <v-list-tile-action>
                 <v-icon>{{ child.icon }}</v-icon>
@@ -58,7 +59,7 @@
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-tile-action>
             <v-list-tile-content>
-              <v-list-tile-title >
+              <v-list-tile-title>
                 {{ item.title }}
               </v-list-tile-title>
             </v-list-tile-content>
