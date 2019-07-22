@@ -5,17 +5,16 @@
     <SnackbarInfo />
     <v-navigation-drawer
       v-model="drawer"
+      :mini-variant="miniVariant"
       :clipped="clipped"
       fixed
       app
-      dark
     >
 
   <v-list dense>
         <template v-for="(item, i) in items">
           <v-list-group
             v-if="item.children"
-            dark
             :key="i"
             :to="item.to"
             router
@@ -52,13 +51,12 @@
           </v-list-group>
           <v-list-tile v-else :key="item.title" :to="item.to"
             router
-            exact
-            active-class="teal--text text--lighten-2">
+            exact>
             <v-list-tile-action>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-tile-action>
             <v-list-tile-content>
-              <v-list-tile-title >
+              <v-list-tile-title>
                 {{ item.title }}
               </v-list-tile-title>
             </v-list-tile-content>
@@ -71,16 +69,33 @@
       :clipped-left="clipped"
       fixed
       app
-      class='teal darken-1'
     >
-      <v-toolbar-side-icon class="white--text" @click="drawer = !drawer" />
-      <v-toolbar-title v-text="title" class="white--text" />
+      <v-toolbar-side-icon @click="drawer = !drawer" />
+      <v-btn
+        icon
+        @click.stop="miniVariant = !miniVariant"
+      >
+        <v-icon>{{ `chevron_${miniVariant ? 'right' : 'left'}` }}</v-icon>
+      </v-btn>
+      <v-btn
+        icon
+        @click.stop="clipped = !clipped"
+      >
+        <v-icon>web</v-icon>
+      </v-btn>
+      <v-btn
+        icon
+        @click.stop="fixed = !fixed"
+      >
+        <v-icon>remove</v-icon>
+      </v-btn>
+      <v-toolbar-title v-text="title" class="light-blue--text darken-4--text" />
       <v-spacer />
       <v-btn
         icon
         @click.stop="rightDrawer = !rightDrawer"
       >
-        <v-icon class="white--text">menu</v-icon>
+        <v-icon>menu</v-icon>
       </v-btn>
     </v-toolbar>
     <v-content>
@@ -159,9 +174,9 @@ export default {
   },
   data() {
     return {
-      clipped: false,
+      clipped: true,
       drawer: true,
-      fixed: true,
+      fixed: false,
       items: [
         {
           icon: 'dashboard',
@@ -189,6 +204,7 @@ export default {
           ]
         }
       ],
+      miniVariant: false,
       right: true,
       rightDrawer: false,
       title: this.$t('title')
@@ -203,5 +219,3 @@ export default {
   mounted() {}
 }
 </script>
-
-

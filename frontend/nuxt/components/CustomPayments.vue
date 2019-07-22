@@ -20,15 +20,15 @@
                 </v-text-field>
               </v-flex>
               <v-flex xs5 pr-4>
-                    <v-select
-                      v-model="monthsSelected"
-                      :items="months"
-                      class='nounderline'
-                      chips
-                      :label="$t('table.chooseMonth')"
-                      multiple
-                      flat
-                    ></v-select>
+                <v-select
+                  v-model="monthsSelected"
+                  :items="months"
+                  class='nounderline'
+                  chips
+                  :label="$t('table.chooseMonth')"
+                  multiple
+                  flat
+                ></v-select>
               </v-flex>
               <v-flex xs1>
                 <v-btn

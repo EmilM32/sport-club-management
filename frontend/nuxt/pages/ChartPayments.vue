@@ -15,6 +15,8 @@
   </v-card>
 </template>
 <script>
+// https://www.yasminzy.com/nuxt/chart.html#steps
+// http://vue-charts.hchspersonal.tk/line
 export default {
   data() {
     return {

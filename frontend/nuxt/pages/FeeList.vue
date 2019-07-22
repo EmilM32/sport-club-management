@@ -32,61 +32,61 @@
                 <td class="pt-4 text-xs-center">
                   <v-checkbox 
                     v-model="props.item.september"
-                    color="success"
+                    color="grey darken-2"
                   ></v-checkbox>
                 </td>
                 <td class="pt-4 text-xs-center">
                   <v-checkbox 
                     v-model="props.item.october"
-                    color="success"
+                    color="grey darken-2"
                   ></v-checkbox>
                 </td>
                 <td class="pt-4 text-xs-center">
                   <v-checkbox 
                     v-model="props.item.november"
-                    color="success"
+                    color="grey darken-2"
                   ></v-checkbox>
                 </td>
                 <td class="pt-4 text-xs-center">
                   <v-checkbox 
                     v-model="props.item.december"
-                    color="success"
+                    color="grey darken-2"
                   ></v-checkbox>
                 </td>
                 <td class="pt-4 text-xs-center">
                   <v-checkbox 
                     v-model="props.item.january"
-                    color="success"
+                    color="grey darken-2"
                   ></v-checkbox>
                 </td>
                 <td class="pt-4 text-xs-center">
                   <v-checkbox 
                     v-model="props.item.february"
-                    color="success"
+                    color="grey darken-2"
                   ></v-checkbox>
                 </td>
                 <td class="pt-4 text-xs-center">
                   <v-checkbox 
                     v-model="props.item.march"
-                    color="success"
+                    color="grey darken-2"
                   ></v-checkbox>
                 </td>
                 <td class="pt-4 text-xs-center">
                   <v-checkbox 
                     v-model="props.item.april"
-                    color="success"
+                    color="grey darken-2"
                   ></v-checkbox>
                 </td>
                 <td class="pt-4 text-xs-center">
                   <v-checkbox 
                     v-model="props.item.may"
-                    color="success"
+                    color="grey darken-2"
                   ></v-checkbox>
                 </td>
                 <td class="pt-4 text-xs-center">
                   <v-checkbox 
                     v-model="props.item.june"
-                    color="success"
+                    color="grey darken-2"
                   ></v-checkbox>
                 </td>
               </template>
