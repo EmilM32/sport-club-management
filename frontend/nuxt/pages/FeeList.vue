@@ -138,7 +138,7 @@ import axios from "axios"
     methods: {
       saveToDb() {
         axios.post("http://localhost:8000/send_data_fee/", this.list).then(response => {
-          if (response.data.code == 1) {
+          if (response.data.code == 0) {
             this.setSnackSuccess(this.$t('snackbar.success'))
           }
         }).catch(error => {
@@ -147,7 +147,7 @@ import axios from "axios"
         });
       },
       getData() {
-        axios.post("http://localhost:8000/get_data_fee/").then(response => {
+        axios.get("http://localhost:8000/get_data_fee/").then(response => {
           this.list = response.data.data
         }).catch(error => {
           console.error('error',error)

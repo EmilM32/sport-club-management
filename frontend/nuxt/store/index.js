@@ -1,6 +1,7 @@
 import axios from "axios"
 export const state = () => ({
   feeData: [],
+  personalData: {}
 })
 export const actions = {
   async GET_FEE ({ commit }) {
@@ -9,7 +10,10 @@ export const actions = {
   },
 }
 export const mutations = {
-  SET_FEE (state, feeData) {
-    state.feeData = feeData
+  SET_FEE (state, data) {
+    state.feeData = data
+  },
+  PERSONAL_DATA (state, data) {
+    state.personalData = data
   },
 }

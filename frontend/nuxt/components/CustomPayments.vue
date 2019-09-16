@@ -113,7 +113,7 @@ export default {
         'id': this.$props.selectedId
       }
       axios.post("http://localhost:8000/save_custom_payments/", dataToSend).then(response => {
-          if (response.data.code == 1) {
+          if (response.data.code == 0) {
             this.setSnackSuccess(this.$t('snackbar.success'))
           }
         }).catch(error => {

@@ -81,74 +81,74 @@ export default {
     cardHeight: 200
   }),
   methods: {
-    mapTest() {
-      const map = new Map();
-      map.set(1, "test");
-      map.set("1", "test2");
-      map.set(true, "test3");
+    // mapTest() {
+    //   const map = new Map();
+    //   map.set(1, "test");
+    //   map.set("1", "test2");
+    //   map.set(true, "test3");
 
-      // console.log('size', map.size)
-      // console.log('map', map)
-      // console.log('map.get(1)', map.get(true))
+    //   // console.log('size', map.size)
+    //   // console.log('map', map)
+    //   // console.log('map.get(1)', map.get(true))
 
-      const obiekt = {
-        jeden: "test_1",
-        dwa: "test_2"
-      };
+    //   // const obiekt = {
+    //   //   jeden: "test_1",
+    //   //   dwa: "test_2"
+    //   // };
 
-      map.set("obj", obiekt);
-      // console.log('obiekt', map.get('obj'))
-      // console.log('map', map)
+    //   // map.set("obj", obiekt);
+    //   // console.log('obiekt', map.get('obj'))
+    //   // console.log('map', map)
 
-      map.set(obiekt, "obj2");
-      // console.log('obiekt2', map.get(obiekt))
-      // console.log('map', map)
+    //   // map.set(obiekt, "obj2");
+    //   // console.log('obiekt2', map.get(obiekt))
+    //   // console.log('map', map)
 
-      // for (const el of map.keys()) {
-      //   console.log(el)
-      // }
-      // map.forEach((key, value) => {
-      //   console.log(`key: ${key}, value: ${value}`)
-      // })
-      const send = Object.fromEntries(map);
-      axios
-        .post("http://localhost:8000/get_map/", send)
-        .then(response => {
-          // console.log(response)
-        })
-        .catch(error => new Error(error));
+    //   // for (const el of map.keys()) {
+    //   //   console.log(el)
+    //   // }
+    //   // map.forEach((key, value) => {
+    //   //   console.log(`key: ${key}, value: ${value}`)
+    //   // })
+    //   // const send = Object.fromEntries(map);
+    //   // axios
+    //   //   .post("http://localhost:8000/get_map/", send)
+    //   //   .then(response => {
+    //   //     // console.log(response)
+    //   //   })
+    //   //   .catch(error => new Error(error));
 
-      // class Rectangle {
-      //   constructor(width, height) {
-      //     this._width = width;
-      //     this._height = height;
-      //   }
-      //   set width(width) {
-      //     this._width = width;
-      //   }
-      //   get width() {
-      //     return this._width;
-      //   }
-      //   set height(height) {
-      //     this._height = height;
-      //   }
-      //   get height() {
-      //     return this._height;
-      //   }
-      //   get area() {
-      //     return this._width * this._height;
-      //   }
-      // }
-      // var r = new Rectangle(50, 20);
-      // console.log(r.area === 1000);
-      // console.log(r.height);
-      // r.height = 7;
-      // console.log(r.height);
-      // console.log(r);
-    }
+    //   // class Rectangle {
+    //   //   constructor(width, height) {
+    //   //     this._width = width;
+    //   //     this._height = height;
+    //   //   }
+    //   //   set width(width) {
+    //   //     this._width = width;
+    //   //   }
+    //   //   get width() {
+    //   //     return this._width;
+    //   //   }
+    //   //   set height(height) {
+    //   //     this._height = height;
+    //   //   }
+    //   //   get height() {
+    //   //     return this._height;
+    //   //   }
+    //   //   get area() {
+    //   //     return this._width * this._height;
+    //   //   }
+    //   // }
+    //   // var r = new Rectangle(50, 20);
+    //   // console.log(r.area === 1000);
+    //   // console.log(r.height);
+    //   // r.height = 7;
+    //   // console.log(r.height);
+    //   // console.log(r);
+    // }
   },
   mounted () {
-    this.mapTest();
+    // this.mapTest();
     // console.log(this.data)
   }
 };

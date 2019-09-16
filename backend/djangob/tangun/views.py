@@ -6,9 +6,11 @@ from django.http import JsonResponse, HttpResponseBadRequest, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from tangun.models import MainList, Level, Fee, Payments
 from django.views.decorators.csrf import ensure_csrf_cookie
+from django.views.decorators.http import require_http_methods
 
 
 @csrf_exempt
+@require_http_methods(["POST"])
 def send_data_list(request):
     data_front = json.loads(request.body)
 
@@ -25,11 +27,11 @@ def send_data_list(request):
     fee_list.player_id = main_list
     fee_list.save()
 
-    response = JsonResponse({'code': 1})
-    return response
+    return JsonResponse({'code': 0})
 
 
 @csrf_exempt
+@require_http_methods(["GET"])
 def get_data_list(request):
     main_list = MainList.objects.all().values()
 
@@ -45,11 +47,11 @@ def get_data_list(request):
             'level':level,
         }]
 
-    response = JsonResponse({'data': data_to_front})
-    return response
+    return JsonResponse({'data': data_to_front})
 
 
 @csrf_exempt
+@require_http_methods(["GET"])
 def get_data_fee(request):
 
     fee_list = Fee.objects.all().values()
@@ -74,22 +76,22 @@ def get_data_fee(request):
             'december': fee['december'],
         }]
 
-    response = JsonResponse({'data': data_to_front})
-    return response
+    return JsonResponse({'data': data_to_front, 'code': 0})
 
 
 @csrf_exempt
+@require_http_methods(["POST"])
 def get_data_payment_custom(request):
     data_front = json.loads(request.body)
 
     player = MainList.objects.get(id=data_front)
     payment_list = Payments.objects.filter(player_id=player).values()
 
-    response = JsonResponse({'data': list(payment_list)})
-    return response
+    return JsonResponse({'data': list(payment_list), 'code': 0})
 
 
 @csrf_exempt
+@require_http_methods(["POST"])
 def send_data_fee(request):
     data_front = json.loads(request.body)
 
@@ -107,11 +109,11 @@ def send_data_fee(request):
         fee.december = data['december']
         fee.save()
 
-    response = JsonResponse({'code': 1})
-    return response
+    return JsonResponse({'code': 0})
 
 
 @csrf_exempt
+@require_http_methods(["POST"])
 def save_custom_payments(request):
     data_front = json.loads(request.body)
 
@@ -124,30 +126,28 @@ def save_custom_payments(request):
                     el.value = data_front['value']
                     el.save()
 
-    response = JsonResponse({'code': 1})
-    return response
+    return JsonResponse({'code': 0})
 
 
 @csrf_exempt
+@require_http_methods(["POST"])
 def get_map(request):
     try:
-        if request.method == 'POST':
-            data_front = json.loads(request.body)
+        data_front = json.loads(request.body)
 
-            # for el in data_front:
-            #   print('el', el)
+        # for el in data_front:
+        #   print('el', el)
 
-            response = JsonResponse({'code': 0, 'data': pip fredata_front})
+        return JsonResponse({'code': 0, 'data': data_front})
 
     except Exception:
         traceback.print_exc()
-        response = JsonResponse({'code': 1})
-
-    return response
+        return JsonResponse({'code': 1})
 
 
 # ########_FILL_PAYMENTS_START_#########
 @csrf_exempt
+@require_http_methods(["GET"])
 def fill_payments(request):
     code = 1
     try:
@@ -174,11 +174,10 @@ def fill_payments(request):
                     payments.save()
                     # print('zapisano',player_id,month,const_year)
 
-            code = 0
+            return JsonResponse({'code': 0})
 
-    except:
-        code = 1
+    except Exception:
+        traceback.print_exc()
+        return JsonResponse({'code': 1})
 
-    response = JsonResponse({'code': code})
-    return response
 # ########_FILL_PAYMENTS_END_#########
