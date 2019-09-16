@@ -26,5 +26,6 @@ urlpatterns = [
     path('send_data_fee/', views.send_data_fee),
     path('get_data_payment_custom/', views.get_data_payment_custom),
     path('save_custom_payments/', views.save_custom_payments),
+    path('get_map/', views.get_map),
     path('fill_payments/', views.fill_payments),
 ]
