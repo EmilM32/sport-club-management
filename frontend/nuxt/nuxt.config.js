@@ -34,7 +34,10 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [{ src: "@/plugins/chart", ssr: false }],
+  plugins: [
+    { src: "@/plugins/chart", ssr: false },
+    '@plugins/vuetify'
+  ],
   /*
   ** Nuxt.js modules
   */

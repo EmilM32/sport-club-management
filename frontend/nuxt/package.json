@@ -17,11 +17,13 @@
     "chart.js": "^2.8.0",
     "hchs-vue-charts": "^1.2.8",
     "nuxt": "^2.0.0",
-    "nuxt-i18n": "^5.12.7"
+    "nuxt-i18n": "^5.12.7",
+    "vuetify": "^2.0.17"
   },
   "devDependencies": {
+    "@mdi/font": "^4.4.95",
+    "nodemon": "^1.18.9",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2",
-    "nodemon": "^1.18.9"
+    "stylus-loader": "^3.0.2"
   }
 }
